@@ -3492,7 +3492,7 @@ msgid "FEC:"
 msgstr "FEC:"
 
 msgid "FFmpeg version: "
-msgstr "Версия FFmpeg: ")
+msgstr "Версия FFmpeg: "
 
 msgid "FTA"
 msgstr "FTA"
