@@ -57,6 +57,14 @@ def getGStreamerVersionString():
 	except:
 		return _("unknown")
 
+def getFFmpegVersionString():
+	try:
+		from glob import glob
+		ffmpeg = [x.split("Version: ") for x in open(glob("/var/lib/opkg/info/ffmpeg.control")[0], "r") if x.startswith("Version:")][0]
+		return "%s" % ffmpeg[1].split("-")[0].replace("\n","")
+	except:
+		return _("unknown")
+
 def getKernelVersionString():
 	try:
 		return open("/proc/version","r").read().split(' ', 4)[2].split('-',2)[0]
@@ -118,7 +126,7 @@ def getCPUInfoString():
 			except:
 				pass
 		if temperature:
-			return "%s %s MHz (%s) %s°C" % (processor, cpu_speed, ngettext("%d core", "%d cores", cpu_count) % cpu_count, temperature)
+			return "%s %s MHz (%s) %sÂ°C" % (processor, cpu_speed, ngettext("%d core", "%d cores", cpu_count) % cpu_count, temperature)
 		return "%s %s MHz (%s)" % (processor, cpu_speed, ngettext("%d core", "%d cores", cpu_count) % cpu_count)
 	except:
 		return _("undefined")
@@ -127,7 +135,7 @@ def getDriverInstalledDate():
 	try:
 		from glob import glob
 		try:
-			driver = [x.split("-")[-2:-1][0][-8:] for x in open(glob("/var/lib/opkg/info/*-dvb-modules-*.control")[0], "r") if x.startswith("Version:")][0]
+			driver = [x.split("-")[-2:-1][0][-8:] for x in open(glob("/var/lib/opkg/info/*-dvb-modules*.control")[0], "r") if x.startswith("Version:")][0]
 			return  "%s-%s-%s" % (driver[:4], driver[4:6], driver[6:])
 		except:
 			try:
