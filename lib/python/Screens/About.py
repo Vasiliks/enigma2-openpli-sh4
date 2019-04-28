@@ -51,7 +51,7 @@ class About(Screen):
 		self["GStreamerVersion"] = StaticText(GStreamerVersion)
 		AboutText += GStreamerVersion + "\n"
 
-		FFmpegVersion = _("FFmpeg version: ") + about.getFFmpegVersionString().replace("GStreamer","")
+		FFmpegVersion = _("FFmpeg version: ") + about.getFFmpegVersionString()
 		self["FFmpegVersion"] = StaticText(FFmpegVersion)
 		AboutText += FFmpegVersion + "\n"
 
