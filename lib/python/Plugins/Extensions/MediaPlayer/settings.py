@@ -14,7 +14,7 @@ config.mediaplayer.defaultDir = ConfigDirectory()
 config.mediaplayer.sortPlaylists = ConfigYesNo(default=False)
 config.mediaplayer.alwaysHideInfoBar = ConfigYesNo(default=True)
 config.mediaplayer.onMainMenu = ConfigYesNo(default=False)
-config.mediaplayer.playIfEmptyPlaylists = ConfigYesNo(default=True)
+config.mediaplayer.playIfEmptyPlaylists = ConfigYesNo(default=False)
 
 class DirectoryBrowser(Screen, HelpableScreen):
 
