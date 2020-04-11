@@ -11493,3 +11493,33 @@ msgstr "LED питания"
 
 msgid "Turn on the power LED."
 msgstr "Включить питание на кнопке LED"
+
+msgid "Geolocation"
+msgstr "Геолокация"
+
+msgid "Geolocation information"
+msgstr "Информация о геолокации"
+
+msgid "Continent: "
+msgstr "Континент: "
+
+msgid "Country: "
+msgstr "Страна: "
+
+msgid "State: "
+msgstr "Государство: "
+
+msgid "City: "
+msgstr "Город: "
+
+msgid "Timezone: "
+msgstr "Часовой пояс: "
+
+msgid "Currency: "
+msgstr "Валюта: "
+
+msgid "Latitude: "
+msgstr "Широта: "
+
+msgid "Longitude: "
+msgstr "Долгота: "
