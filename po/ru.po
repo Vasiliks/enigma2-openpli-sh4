@@ -11507,7 +11507,7 @@ msgid "Country: "
 msgstr "Страна: "
 
 msgid "State: "
-msgstr "Государство: "
+msgstr "Регион: "
 
 msgid "City: "
 msgstr "Город: "
